@@ -1,0 +1,40 @@
+{% extends 'template-admin.html.twig' %}
+
+{% block body %}
+
+<section class="add-chapters">
+
+    <div class="container">
+
+            <div class="row add-chapter">
+
+                <form method="post" class="col-lg-9 form-add-chapter">
+                    <div class="add-title form-group">
+                        <label class="text-uppercase field-subtitle font-weight-bold">titre</label>
+                        <input class="add-title-input form-control-plaintext border rounded pl-2" name="chapter-title" value="{{ chapter.title }}" placeholder="Titre du chapitre" required>
+                    </div>
+
+                    <div class="add-title form-group">
+                        <label class="text-uppercase field-subtitle font-weight-bold">numéro de chapitre</label>
+                        <input class="add-title-input form-control-plaintext border rounded pl-2" name="chapter-nb" value="{{ chapter.num_chap }}" placeholder="Numéro du chapitre" required>
+                    </div>
+
+                    <div class="add-content form-group">
+                        <label class="text-uppercase field-subtitle font-weight-bold">contenu</label>
+
+                        
+                        <textarea class="add-content-input form-control-plaintext border rounded pl-2" name="chapter-content" placeholder="Contenu du chapitre" required>{{ chapter.content }}</textarea>
+                    </div>
+
+                    <button type="submit" class="btn-save btn btn-default">Enregistrer</button>
+                    <a class="btn-publish btn btn-default" href="/admin/publish-chapter/{{ chapter.id }}">Publier</a>
+                    <a class="btn-delete btn btn-default" href="/admin/delete-chapter/{{ chapter.id }}">Supprimer</a>
+
+                </form>
+            </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

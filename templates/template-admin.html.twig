@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
+        <link rel="stylesheet" href="http://alaska.rejane.me/public/reset.css">
+        <link rel="stylesheet" href="http://alaska.rejane.me/public/style.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.19.1/ui/trumbowyg.min.css">
+
+        <title>Admin blog</title>
+    </head>
+
+
+    <body>
+
+    {# HEADER > MENU #}
+    <header class="header w-100 header-admin">
+
+        <nav class="navbar navbar-expand-lg menu">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand nav-brand-admin" href="/admin">ADMIN</a>
+                </div>
+                <div class="collapse navbar-collapse d-flex justify-content-between">
+                    <ul class="nav navbar-nav menu-admin-list">
+                        <li class="nav-item menu-admin-list-button"><a class="nav-link menu-admin-list-button-link btn btn-default navbar-btn" href="/" role="button">Revenir au site</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav menu-admin-list">
+                        <li class="nav-item menu-admin-list-item"><a class="nav-link menu-list-item-link px-2 text-decoration-none menu-list-item-link" href="/admin/add-chapter">+ Nouveau chapitre</a></li>
+                        <li class="nav-item menu-admin-list-item"><a class="nav-link menu-list-item-link px-2 text-decoration-none" href="/admin/chapters-management">Tous les chapitres</a></li>
+                        <li class="nav-item menu-admin-list-item"><a class="nav-link menu-list-item-link px-2 text-decoration-none" href="/admin/comment">Commentaires</a></li>
+                        <li class="nav-item menu-admin-list-item"><a class="nav-link menu-list-item-link btn btn-default navbar-btn" href="/deconnexion" role="button">Déconnexion</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    {# BODY #}
+
+    {% block body %}
+
+    {% endblock %}
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.19.1/trumbowyg.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.19.1/langs/fr.min.js"></script>
+        <script src="http://alaska.rejane.me/public/main.js"></script>
+
+    </body>
+</html>

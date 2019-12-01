@@ -1,0 +1,706 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* HEADER > MENU */
+.container {
+    max-width: 1150px;
+    width: 100%;
+    height: auto;
+    border-radius: .25rem;
+}
+
+.navbar {
+    position: none;
+    min-height: 70px !important;
+    border: none;
+    justify-content: flex-start !important;
+}
+
+/* .navbar-default {
+    background-color: white;
+    border-color: none !important;
+} */
+
+.navbar-brand {
+    color: #6B6A6A !important;
+    font-size: 25px !important;
+    font-family: 'Lora', serif !important;
+}
+
+/* .nav {
+    padding: 0 !important;
+} */
+
+
+.menu-list-item-link {
+    color: #6B6A6A !important;
+}
+
+.menu-list-item-link:hover {
+    color: #525050 !important;
+}
+
+.btn {
+    background-color: #374D51 !important;
+    color: white !important;
+}
+
+.btn:hover {
+    background-color: #49666b !important;
+    color: white !important;
+}
+
+#menu-checkbox {
+    display: none;
+}
+
+.menu-icon-bar {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+/* media queries */
+
+@media (max-width: 992px) {
+
+    .menu-list {
+        flex-direction: row !important;
+    }
+    
+    .menu-list-item-button {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .menu-icon-bar {
+        color:  #49666b;
+        font-size: 25px !important;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+
+}
+
+
+
+/* SLIDER BODY INDEX */
+
+.image-slider {
+    background-image: url(../public/image/darrin-henein-sREvt-W52Tc-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 100px;
+    border-radius: 4px;
+}
+
+.groupe-texte-slider {
+    max-width: 600px !important;
+}
+
+.h1 {
+    color: white !important;
+    font-family: 'Lora', serif !important;
+}
+
+.texte-slider {
+    color: white !important;
+}
+
+.cta-slider {
+    color: white !important;
+}
+
+.btn-slider {
+    background-color: #ffa07a !important;
+}
+
+.btn-slider:hover {
+    background-color: #e8926f !important;
+}
+
+
+/* media queries */
+
+@media (max-width: 992px) {
+
+    .image-slider {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .slider-start-novel {
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .slider-start-novel {
+        padding-top: 30px;
+    }
+}
+
+
+
+/* DERNIERS CHAPITRES BODY INDEX */
+
+
+.h2 {
+    color: #6B6A6A !important;
+}
+
+.img-chap {
+    max-width: 225p;
+    height: 225px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.item-last-chapter:nth-child(1) .img-chap {
+    background-image: url(../public/image/tobias-tullius-QTEZfr5xKF8-unsplash.jpg);
+}
+
+.item-last-chapter:nth-child(2) .img-chap {
+    background-image: url(../public/image/matt-heaton-JJdBjI5BXzA-unsplash.jpg);
+}
+
+.item-last-chapter:nth-child(3) .img-chap {
+    background-image: url(../public/image/elijah-hiett-gO0byDPgxzI-unsplash.jpg);
+}
+
+.item-last-chapter:nth-child(4) .img-chap {
+    background-image: url(../public/image/zeke-tucker-1xzwRa5vEbg-unsplash.jpg);
+}
+
+
+.link-chap:hover {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* media queries */
+
+@media (max-width: 992px) {
+
+    .h2 {
+        text-align: center;
+        color: #6B6A6A !important;
+    }
+
+    .link-chap {
+        display: block;
+        padding-bottom: 15px !important;
+    }
+
+    .img-chap {
+        margin-bottom: 6px !important;
+        max-width: 100%;
+    }
+
+    .item-last-chapter {
+        text-align: center;
+    }
+}
+
+
+/* AUTEUR BODY INDEX */
+
+.img-auteur {
+    background-image: url(../public/image/photo-1523278669709-c05da80b6a65.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    max-width: 150px !important;
+    height: 150px !important;
+}
+
+.texte-auteur {
+    color: #6B6A6A !important;
+    font-family: 'Lora', serif !important;
+}
+
+
+/* media queries */
+
+
+@media (max-width: 767px) {
+
+    .content-auteur {
+        flex-direction: column !important;
+    }
+
+    .texte-auteur {
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .img-auteur {
+        margin: 0;
+    }
+}
+
+
+
+
+
+/* BODY CHAPTERS */
+
+
+.chapters {
+    margin-top: 100px !important;
+}
+    
+    
+.chapters-list-item-link {
+    font-family: 'Lora', serif !important;
+    color: #6B6A6A !important;
+    font-size: 25px !important;
+}
+
+
+/* BODY CHAPTER > TEXTE */
+
+.chapitre {
+    margin-top: 100px;
+}
+
+.chapters-titre-h2 {
+    border: #374D51 !important;
+}
+
+.chapter-titre-h2 {
+    color: #6B6A6A !important;
+}
+
+.chapter-content {
+    font-family: 'Lora', serif !important;
+    color: #6B6A6A !important;
+    font-size: 18px !important;
+}
+
+
+
+/* BODY CHAPTER > COMMENTAIRES */
+
+.nbre-comment {
+    color:lightsalmon !important;
+}
+
+.submit-comment {
+    background-color: white;
+}
+
+
+.titre-sumbit-comment {
+    color:lightsalmon !important;
+}
+
+.pseudo-comment {
+    color: #777777;
+    font-size: 15px;
+}
+
+.content-comment {
+    color: #777777;
+    font-size: 15px;
+}
+
+.comment-form-message {
+    font-size: 14px;
+    border-color: #BFBFBF;
+    color: #777777;
+}
+
+.comment-form-email {
+    font-size: 14px;
+    color: #777777;
+}
+
+.comment-form-name {
+    font-size: 14px;
+    color: #777777;
+    /* border-color: #BFBFBF; */
+}
+
+.comment-title-h3 {
+    font-weight: 400 !important;
+    color: #777777;
+}
+
+.link-signal {
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: #ff5c5c;
+}
+
+.link-signal:hover {
+    color: #ff5c5c !important;
+    font-weight: bold !important;
+}
+
+.display-comment {
+    width: 75% !important;
+}
+
+.submit-comment {
+    width: 75% !important;
+}
+
+
+/* media queries */
+
+@media (max-width: 992px) {
+
+    .display-comment {
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .submit-comment {
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .row-comment {
+        padding: 0 15px !important;
+    }
+}
+
+
+/* BODY CONNECTION */
+
+.connection {
+    margin-top: 100px;
+}
+
+.titre-connection {
+    color: #6B6A6A !important;
+}
+
+.connection-label {
+    font-size: 14px !important;
+}
+
+.text-errors {
+    color: #f56767;
+}
+
+
+
+
+/* BODY ABOUT/A PROPOS */
+
+.about {
+    margin-top: 100px;
+}
+
+.about-picture {
+    margin: 0 auto;
+}
+
+.about-titre {
+    font-size: 35px !important;
+    text-align: left;
+    color: #6B6A6A !important;
+}
+
+.about-text {
+    font-family: 'Lora', serif !important;
+    color: #6B6A6A !important;
+    font-size: 20px !important;
+    text-align: left;
+}
+
+
+/* media queries */
+
+@media (max-width: 767px) {
+
+    .about-titre {
+        text-align: center !important;
+        padding-right: 3rem !important;
+    }
+
+    .about-text {
+        text-align: center !important;
+    }
+
+}
+
+
+
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #a1babf;
+    margin-top: 150px !important;
+    padding: 50px 0;
+}
+.footer-contact-email {
+    margin-bottom: 0;
+}
+.footer-adresse {
+    color: #6B6A6A !important;
+}
+.footer-form {
+    align-items: flex-end;
+}
+.footer-form-input-group {
+    justify-content: end;
+}
+
+
+/* media queries */
+
+@media (max-width: 992px) {
+    .row-footer {
+        flex-wrap: unset !important;
+    }
+    .footer-contact, .footer-form {
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-titre-nl {
+        text-align: center;
+    }
+    .footer-form-input-group {
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-form {
+        margin-top: 20px;
+    }
+    .row-footer {
+        flex-direction: column;
+    }
+
+    .footer-adresse {
+        text-align: center;
+    }
+
+    .footer-titre-contact {
+        text-align: center;
+    }
+
+
+}
+
+
+
+/* BACK-OFFICE */
+
+/* TEMPLATE ADMIN */
+
+.header-admin {
+    margin-bottom: 100px;
+}
+
+.menu-admin-list-button {
+    background-color: #374D51 !important;
+    color: white !important;
+    border-radius: .25rem;
+}
+
+
+/* media queries */
+
+@media (max-width: 992px) {
+
+    .menu-admin-list {
+        display: contents ;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .menu-admin-list {
+        display: contents !important;
+    }
+}
+
+
+
+/* HOMEPAGE/INDEX ADMIN */
+
+.dashboard-add-chapters-item {
+    border : 1px solid #777777;
+}
+
+.dashboard-comment-item {
+    border : 1px solid #777777;
+}
+
+.dashboard-manage-chapters-link {
+    color: #3B4C50;
+}
+
+.dashboard-manage-chapters-link:hover {
+    color: #a1babf;
+}
+
+.dashboard-add-chapters-link {
+    color: #3B4C50;
+}
+
+.dashboard-add-chapters-link:hover {
+    color: #a1babf;
+}
+
+.dashboard-comment-link {
+    color: #3B4C50;
+}
+
+.dashboard-comment-link:hover {
+    color: #a1babf;
+}
+
+
+.dashboard-manage-chapters-item {
+    border : 1px solid #777777;
+
+}
+
+
+/* media queries */
+
+@media (max-width: 992px) {
+
+    .row-footer {
+        flex-wrap: unset !important;
+    }
+
+    .dashboard-manage-chapters-item {
+        margin-top: 1.5rem !important;
+    }
+}
+
+
+
+
+
+
+/* COMMENT ADMIN */
+
+.comment-title-h2 {
+    color: #6B6A6A !important;
+}
+
+
+/* media queries */
+
+@media (max-width: 992px) {
+
+    .comment-title-h3 {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .comment-container {
+        max-width: 700px !important;
+    }
+
+    .table-comment-moderate {
+        text-align: center !important;
+    }
+
+    .table-comment-validate {
+        text-align: center !important;
+    }
+
+}
+
+
+
+
+
+
+/* CHAPTERS MANAGEMENT ADMIN */
+
+.chapters-list-item-online {
+    text-decoration: none;
+    color: #47bd6e;
+}
+
+.chapters-list-item-online:hover{
+    color: #47bd6e;
+}
+
+.chapters-list-item-draft {
+    color: #f57373;
+}
+
+.chapters-list-item-draft:hover {
+    color: #f57373;
+}
+
+
+.chapters-title-h3 {
+    font-weight: 400 !important;
+    color: #777777;
+}
+
+
+/* ADD CHAPTER ADMIN */
+
+.field-subtitle {
+    font-size: 12px;
+}
+
+.add-content-input {
+    height: 600px !important;
+}
+
+.btn-save {
+    background-color: #ffa07a !important;
+}
+
+.btn-save:hover {
+    background-color: #e8926f !important;
+}
+
+.btn-publish {
+    background-color: #549a7a !important;
+}
+
+.btn-publish:hover {
+    background-color: #4e8e71 !important;
+}
+
+.btn-delete {
+    background-color: #fd5e60 !important;
+}
+
+.btn-delete:hover {
+    background-color: #ea5658 !important;
+}
+
+.form-add-chapter {
+    margin-bottom: 150px;
+}
+
+
+
+
+
+

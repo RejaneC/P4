@@ -1,0 +1,93 @@
+{% extends 'template-admin.html.twig' %}
+
+
+{% block body %}
+
+
+<section class="admin-chapters">
+    <div class="container">
+
+        <div class="wrapper">
+
+            <div class="row admin-chapters-titre">
+                <div class="col-lg-12">
+                    <h2 class="admin-chapters-titre-h2 h2 text-center text-uppercase font-weight-bold">Gestion des chapitres</h2>
+                </div>
+            </div>
+
+            {# <div class="row admin-chapters-content">
+                <div class="col-lg-12">
+
+                    <ul class="admin-chapters-list text-center mt-5">
+
+                        {% for adminChapter in adminChapters %} 
+                            <li class="chapters-list-item">
+                                <a class="chapters-list-item-link" href="/admin/chapters-management">
+                                    Chapitre {{ adminChapter.num_chap|number_format }} - {{ adminChapter.title }} |  
+                                </a>
+
+                                {% if adminChapter.online %}
+                                    <a class="chapters-list-item-online text-uppercase" href="/admin/chapters-management">En ligne</a>
+                                {% else %}
+                                    <a class="chapters-list-item-draft text-uppercase" href="/admin/chapters-management">Brouillon</a>
+                                {% endif %}
+
+                                
+                                
+                            </li>
+                        {% endfor %}
+                    
+                    </ul>
+                </div>
+            </div> #}
+
+
+            <div class="table-responsive mt-5">
+
+                <table class="table table-hover" >
+
+                    <thead>
+                        <tr class="font-weight-bold">
+                            <th scope="col">Chapitre et Titre</th>
+                            <th scope="col">Statut</th>
+                            <th scope="col">Modifier</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for adminChapter in adminChapters %}
+                            <tr>
+                                <td scope="row">
+                                    <a class="chapters-list-item-link" href="/admin/chapter-management/{{ adminChapter.id }}/chapitre-{{ adminChapter.num_chap }}">Chapitre {{ adminChapter.num_chap|number_format }} - {{ adminChapter.title }}</a>
+                                </td>
+                                
+                                <td>
+                                    {% if adminChapter.online %}
+                                        <p class="chapters-list-item-online text-uppercase">En ligne</p>
+                                    {% else %}
+                                        <p class="chapters-list-item-draft text-uppercase">Brouillon</p>
+                                    {% endif %}
+                                </td>
+
+                                <td><a href="/admin/chapter-management/{{ adminChapter.id }}/chapitre-{{ adminChapter.num_chap }}" >MODIFIER</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+
+                </table>
+        </div>
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+</section>
+
+
+
+{% endblock %}

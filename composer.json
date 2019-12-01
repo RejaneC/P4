@@ -1,0 +1,28 @@
+{
+    "name": "rejane/blog",
+    "description": "Blog pour un écrivain",
+    "authors": [
+        {
+            "name": "rejane",
+            "email": "rejane.curk@gmail.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Lib\\": "lib/",
+            "Src\\": "src/"
+        }
+    },
+    "require": {
+        "twig/twig": "^2.12",
+        "cocur/slugify": "^3.2",
+        "squizlabs/php_codesniffer": "*",
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpmd/phpmd": "^2.7",
+        "phpmetrics/phpmetrics": "^2.4"
+    },
+    "require-dev": {
+        "sebastian/phpcpd": "^4.1"
+    }
+}

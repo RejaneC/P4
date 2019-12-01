@@ -1,0 +1,113 @@
+{% extends 'template.html.twig' %}
+
+
+{% block body %}
+
+
+{# SLIDER #}
+
+<section class="slider">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12 image-slider d-flex align-items-center w-100">
+                
+                <div class="col-lg-7 groupe-texte-slider">
+                    <h1 class="h1">Dernier billet pour l'alaska</h1>
+                    <p class="texte-slider text-justify">Dum apud Persas, ut supra narravimus, perfidia regis motus agitat insperatos, et in eois tractibus bella rediviva consurgunt, anno sexto decimo et eo diutius post Nepotiani exitium, saeviens per urbem aeternam urebat cuncta Bellona, ex primordiis minimis ad clades excita luctuosas, quas obliterasset utinam iuge silentium! ne forte paria quandoque temptentur, plus exemplis generalibus nocitura quam delictis.</p>
+                </div>
+
+
+                <div class="col-lg-5 d-flex justify-content-center align-items-center slider-start-novel">
+                    <div>
+                        <p class="cta-slider font-weight-bold">Démarrer le roman</p>
+                        <a class="btn-slider btn btn-default" href="/chapitre-1/titre-chapitre-1/1" role="button">Je découvre</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{# DERNIERS CHAPITRES #}
+
+<section class="chapitres">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 mt-5 section-chapitre-titre">
+                <h2 class="h2">Découvrez les derniers chapitres publiés</h2>
+            </div>
+        </div>
+
+        <ul class="row mt-4 row-last-chapter d-flex justify-content-center">
+
+            {% for recentChapter in recentChapters  %}
+               
+                <li class="col-lg-3 col-md-5 col-sm-6 item-last-chapter">
+                    <div class="img-chap w-100 mb-3 rounded"></div>
+                    <a class="text-dark link-chap" href="/chapitre-{{ recentChapter.num_chap }}/{{ recentChapter.title }}/{{ recentChapter.id }}">Chapitre {{ recentChapter.num_chap }}</a>
+                </li>
+
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+{# AUTEUR #}
+
+<section class="auteur">
+
+    <div class="container">
+
+        <div class="row my-5">
+
+            <div class="col-lg-12 d-flex align-items-center justify-content-center content-auteur">
+
+                <p class="texte-auteur font-italic">"Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. quid enim me prohiberet Epicureum esse, si probarem, quae ille diceret? cum praesertim illa perdiscere ludus esset. Quam ob rem dissentientium inter se reprehensiones non sunt"</p>
+                <div class="img-auteur rounded-circle w-100 ml-3"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{# FOOTER #}
+<section class="footer w-100 mt-5">
+
+    <div class="container">
+
+        <div class="row row-footer">
+
+            <div class="footer-contact col-lg-6 footer-adresse d-flex flex-column justify-content-center align-items-left">
+                <p class="footer-titre-contact font-weight-bold">Me contacter</p>
+                <p class="footer-contact-email">hello@jeandelaroche.me</p>
+            </div>
+
+            <div class="footer-form col-lg-6 d-flex flex-column">
+                <p class="footer-titre-nl font-weight-bold">Recevez le dernier chapitre dès sa sortie !</p>
+                <form class="footer-form-input-group d-flex align-items-center">
+                    <input type="email" name="email" class="form-control form-nl w-100 rounded" placeholder="Email">
+                    <button type="submit" class="btn btn-default px-4 ml-1">Envoyer</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{% endblock %}

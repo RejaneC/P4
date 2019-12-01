@@ -1,0 +1,37 @@
+{% extends 'template-admin.html.twig' %}
+
+{% block body %}
+
+<section class="add-chapters">
+
+    <div class="container">
+
+        <div class="row add-chapter">
+
+            <form method="post" class="col-lg-9 form-add-chapter">
+                <div class="add-title form-group">
+                    <label class="text-uppercase field-subtitle font-weight-bold">titre</label>
+                    <input class="add-title-input form-control-plaintext border rounded pl-2" name="chapter-title" value="" placeholder="Titre du chapitre" required>
+                </div>
+
+                <div class="add-title form-group">
+                    <label class="text-uppercase field-subtitle font-weight-bold">Numéro de chapitre</label>
+                    <input class="add-title-input form-control-plaintext border rounded pl-2" name="chapter-nb" value="" placeholder="Numéro du chapitre" required>
+                </div>
+
+                <div class="add-content form-group">
+                    <label class="text-uppercase field-subtitle font-weight-bold">contenu</label>
+                    <textarea class="add-content-input form-control-plaintext border rounded pl-2" name="chapter-content" placeholder="Contenu du chapitre" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-save btn btn-default" >Enregistrer</button>
+            </form>
+
+        </div>
+ 
+    </div>
+
+</section>
+
+{% endblock %}
+

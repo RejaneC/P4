@@ -1,0 +1,70 @@
+{% extends 'template.html.twig' %}
+
+
+{% block body %}
+
+<section class="connection"> 
+
+    <div class="container">
+
+        <div class="row d-flex justify-content-center">
+            <p class="titre-connection font-weight-bold" >Connectez-vous à l'admin</p>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+
+
+            <form method="post" class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6 form-connection p-4 border rounded">
+            
+                {% if errors|length > 0 %}
+                    <p class="text-errors text-center font-weight-bold">{{ errors }}</p>
+                {% endif %}
+
+                <div class="form-group connection-form-id">
+                    <label class="connection-label text-uppercase font-weight-bold">Identifiant</label>
+                    <input type="text" class="form-control connection-input" name="username" placeholder="Identifiant" required>
+                </div>
+
+                <div class="form-group connection-form-password">
+                    <label class="connection-label text-uppercase font-weight-bold">Mot de passe</label>
+                    <input type="password" class="form-control connection-input" name="password" placeholder="Mot de passe" required>
+                </div>
+
+                <button type="submit" class="btn btn-default">Je me connecte</button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+{# FOOTER #}
+<section class="footer w-100 mt-5">
+
+    <div class="container">
+
+        <div class="row row-footer">
+
+            <div class="footer-contact col-lg-6 footer-adresse d-flex flex-column justify-content-center align-items-left">
+                <p class="footer-titre-contact font-weight-bold">Me contacter</p>
+                <p class="footer-contact-email">hello@jeandelaroche.me</p>
+            </div>
+
+            <div class="footer-form col-lg-6 d-flex flex-column">
+                <p class="footer-titre-nl font-weight-bold">Recevez le dernier chapitre dès sa sortie !</p>
+                <form class="footer-form-input-group d-flex align-items-center">
+                    <input type="email" name="email" class="form-control form-nl w-100 rounded" placeholder="Email">
+                    <button type="submit" class="btn btn-default px-4 ml-1">Envoyer</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

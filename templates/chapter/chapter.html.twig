@@ -1,0 +1,101 @@
+{% extends 'template.html.twig' %}
+
+{% block body %}
+
+{# CHAPITRE #}
+
+<section class="chapitre">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h2 class="chapter-titre-h2 h2 text-left text-uppercase font-weight-bold border-bottom pb-4">Chapitre {{ chapter.num_chap|number_format }} - {{ chapter.title }}</h2> 
+            </div>
+
+            <div class="col-lg-12">
+                <p class="chapter-content mt-5">{{ chapter.content|raw }}</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{# COMMENTAIRE #}
+<section class="comment">
+    <div class="container">
+
+        {# Commentaires validés #}
+
+        <div class="row mt-5 row-comment">
+            {% if comments|length > 0 %}
+            <div class="row display-comment">
+                <div class="col-lg-12 display-comment-titre">
+                    <p class="nbre-comment text-uppercase font-weight-bold m-0 pt-2 pb-2">commentaires</p>
+                </div>
+                <div class="col-lg-6 display-comment-text">
+                    {% for comment in comments %} 
+                        <div class="col-lg-12 border rounded-bottom p-3">
+                            <p class="pseudo-comment">{{ comment.pseudo }}</p>
+                            <p class="content-comment m-0">{{ comment.content }}</p>
+                            <a href="/admin/warn-comment/{{ comment.id }}" class="link-signal position-absolute text-uppercase text-decoration-none">signaler</a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+
+        {# Formulaire de soumission d'un commentaire #}
+
+        <div class="row mt-5 row-comment">
+            <div class="row submit-comment">
+                <div class="col-lg-12">
+                    <p class="titre-sumbit-comment text-uppercase font-weight-bold m-0 pt-2 pb-2">Laissez un commentaire</p>
+                </div>
+            </div>
+            <div class="row submit-comment">
+                <form method="post" class="col-lg-12 form-comment border rounded-bottom p-3">
+                    <textarea class="w-100 mb-2 pb-5 pl-2 pt-2 comment-form-message" name="content" placeholder="Votre message" required></textarea>
+                    <input class="p-1 comment-form-name mr-4" type="text" name="pseudo" placeholder="Nom" required>
+                    <button class="btn-slider btn btn-default" name="submit" type="submit">Envoyer</button>
+                </form> 
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+{# FOOTER #}
+<section class="footer w-100 mt-5">
+
+    <div class="container">
+
+        <div class="row row-footer">
+
+            <div class="footer-contact col-lg-6 footer-adresse d-flex flex-column justify-content-center align-items-left">
+                <p class="footer-titre-contact font-weight-bold">Me contacter</p>
+                <p class="footer-contact-email">hello@jeandelaroche.me</p>
+            </div>
+
+            <div class="footer-form col-lg-6 d-flex flex-column">
+                <p class="footer-titre-nl font-weight-bold">Recevez le dernier chapitre dès sa sortie !</p>
+                <form class="footer-form-input-group d-flex align-items-center">
+                    <input type="email" name="email" class="form-control form-nl w-100 rounded" placeholder="Email">
+                    <button type="submit" class="btn btn-default px-4 ml-1">Envoyer</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

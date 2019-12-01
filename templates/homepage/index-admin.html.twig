@@ -1,0 +1,35 @@
+{% extends 'template-admin.html.twig' %}
+
+
+{% block body %}
+
+<section class="dashboard ">
+
+    <div class="container dashboard-container h-100">
+
+        <div class="row dashboard-chapters">
+
+            <div class="col-lg-6 dashboard-add-chapters-item rounded">
+                <h2 class="h2 dashboard-h2 p-5 text-center"><a class="dashboard-add-chapters-link text-decoration-none" href="/admin/add-chapter">Ecrire un nouveau chapitre</a></h2>
+            </div>
+
+            <div class="col-lg-6 dashboard-manage-chapters-item rounded">
+                <h2 class="h2 dashboard-h2 p-5 text-center"><a class="dashboard-manage-chapters-link text-decoration-none" href="/admin/chapters-management">Gérer les chapitres</a></h2>
+            </div>
+
+        </div>
+
+        <div class="row dashboard-comment">
+            <div class="col-lg-12 dashboard-comment-item rounded mt-4">
+                <h2 class="h2 dashboard-h2 p-5 text-center"><a class="dashboard-comment-link text-decoration-none" href="/admin/comment">Modérer les commentaires</a></h2>
+            </div>
+
+        </div>
+    </div>
+
+
+</section>
+
+
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'template.html.twig' %}
+
+
+{% block body %}
+
+
+
+<section class="about">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12 about-content">
+
+                <div class="img-auteur about-picture border rounded-circle"></div>
+                <h2 class="h2 about-titre pl-5 mt-5 text-uppercase font-weight-bold">Qui suis-je ?</h2>
+                <p class="about-text text-justify px-5 my-5 font-weight-light">Quapropter a natura mihi videtur potius quam ab indigentia orta amicitia, applicatione magis animi cum quodam sensu amandi quam cogitatione quantum illa res utilitatis esset habitura. Quod quidem quale sit, etiam in bestiis quibusdam animadverti potest, quae ex se natos ita amant ad quoddam tempus et ab eis ita amantur ut facile earum sensus appareat. Quod in homine multo est evidentius, primum ex ea caritate quae est inter natos et parentes, quae dirimi nisi detestabili scelere non potest; deinde cum similis sensus exstitit amoris, si aliquem nacti sumus cuius cum moribus et natura congruamus, quod in eo quasi lumen aliquod probitatis et virtutis perspicere videamur.<br>Adolescebat autem obstinatum propositum erga haec et similia multa scrutanda, stimulos admovente regina, quae abrupte mariti fortunas trudebat in exitium praeceps, cum eum potius lenitate feminea ad veritatis humanitatisque viam reducere utilia suadendo deberet, ut in Gordianorum actibus factitasse Maximini truculenti illius imperatoris rettulimus coniugem.<br>Nam quibusdam, quos audio sapientes habitos in Graecia, placuisse opinor mirabilia quaedam (sed nihil est quod illi non persequantur argutiis): partim fugiendas esse nimias amicitias, ne necesse sit unum sollicitum esse pro pluribus; satis superque esse sibi suarum cuique rerum, alienis nimis implicari molestum esse; commodissimum esse quam laxissimas habenas habere amicitiae, quas vel adducas, cum velis, vel remittas; caput enim esse ad beate vivendum securitatem, qua frui non possit animus, si tamquam parturiat unus pro pluribus.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+{# FOOTER #}
+<section class="footer w-100 mt-5">
+
+    <div class="container">
+
+        <div class="row row-footer">
+
+            <div class="footer-contact col-lg-6 footer-adresse d-flex flex-column justify-content-center align-items-left">
+                <p class="footer-titre-contact font-weight-bold">Me contacter</p>
+                <p class="footer-contact-email">hello@jeandelaroche.me</p>
+            </div>
+
+            <div class="footer-form col-lg-6 d-flex flex-column">
+                <p class="footer-titre-nl font-weight-bold">Recevez le dernier chapitre dès sa sortie !</p>
+                <form class="footer-form-input-group d-flex align-items-center">
+                    <input type="email" name="email" class="form-control form-nl w-100 rounded" placeholder="Email">
+                    <button type="submit" class="btn btn-default px-4 ml-1">Envoyer</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{% endblock %}
