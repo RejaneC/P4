@@ -35,7 +35,6 @@ class ChapterController extends Controller
         ]);
     }
 
-    
     /** Affichage de la page d'un chapitre  */
     public function chapter($num_chap, $title, $id)
     {
@@ -130,17 +129,17 @@ class ChapterController extends Controller
         $chapter = new Chapter();
 
         if (
-            $this->request->getMethod() === "POST" // On check la nature de la requête
-            && isset($this->request->getPost()["chapter-title"]) // Name de l'input dans Tiwig
-            && !empty($this->request->getPost()["chapter-title"]) // On vérifie qu'il y a bien des infos remplies dans l'input (pas vide) et qu'il est bien défini
+            $this->request->getMethod() === "POST"
+            && isset($this->request->getPost()["chapter-title"]) 
+            && !empty($this->request->getPost()["chapter-title"]) 
             && isset($this->request->getPost()["chapter-content"])
             && !empty($this->request->getPost()["chapter-content"])
             && isset($this->request->getPost()["chapter-nb"])
             && !empty($this->request->getPost()["chapter-nb"])
-        ) { // Si tout est rempli/défini etc
+        ) { 
             /** Requêtes d'ajout du chapitre */
             $chapter->addChapter(
-                $this->request->getPost()["chapter-title"], // On crée le chapitre en envoyant ce qu'il y a dans le formulaire (on envoie à la bdd les infos)
+                $this->request->getPost()["chapter-title"],
                 $this->request->getPost()["chapter-content"],
                 $this->request->getPost()["chapter-nb"]
             );

@@ -35,8 +35,8 @@ class SecurityController extends Controller
             
             /** Récupération de l'identifiant dans $form_username*/
             $form_username = $this->request->getPost()["username"];
-            $username = $access->user($form_username); /
-                
+            $username = $access->user($form_username); 
+            
             /** Récupération du mot de passe dans $form_password  */
             $form_password = $this->request->getPost()["password"];
             
@@ -59,10 +59,11 @@ class SecurityController extends Controller
                 $errors = "Cet identifiant n'est pas le bon";
             }
         }
+        
         return $this->render('security/connection.html.twig', [
             "errors" => $errors,
             "session" => $session
-        ]);
+        ]); // On rend la vue connection avec le tableau erreur / 
     }
     
 
