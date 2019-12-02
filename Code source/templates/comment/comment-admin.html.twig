@@ -26,7 +26,6 @@
                         <tr class="font-weight-bold">
                             <th scope="col">Pseudo</th>
                             <th scope="col">Commentaire</th>
-                            <th scope="col">Chapitre</th>
                             <th scope="col">Validation</th>
                         </tr>
                     </thead>
@@ -37,7 +36,6 @@
                                 <tr>
                                     <td scope="row">{{ commentsAdmin.pseudo }}</td>
                                     <td>{{ commentsAdmin.content }}</td>
-                                    <td>#{{ commentsAdmin.id_chap }}</td>
                                     <td class="table-comment-validate"><a href="/admin/validate-comment/{{ commentsAdmin.id }}" >ACCEPTER</a> - <a href="/admin/remove-comment/{{ commentsAdmin.id }}" >REFUSER</a></td>
                                 </tr>
                             {% endif %}
@@ -59,7 +57,6 @@
                         <tr class="font-weight-bold">
                             <th scope="col">Pseudo</th>
                             <th scope="col">Commentaire</th>
-                            <th scope="col">Chapitre</th>
                             <th scope="col">Modération</th>
                         </tr>
                     </thead>
@@ -70,7 +67,6 @@
                                 <tr>
                                     <td scope="row">{{ commentsAdmin.pseudo }}</td>
                                     <td>{{ commentsAdmin.content }}</td>
-                                    <td>#{{ commentsAdmin.id_chap }}</td>
                                     <td class="table-comment-moderate"><a href="/admin/accept-comment/{{ commentsAdmin.id }}" >ACCEPTER</a> - <a href="/admin/remove-comment/{{ commentsAdmin.id }}" >SUPPRIMER</a></td>
                                 </tr>
                             {% endif %}

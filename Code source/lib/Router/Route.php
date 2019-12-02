@@ -79,7 +79,6 @@ class Route
         return true;
     }
 
-
     /** Faire matcher la bonne route */
     private function paramMatch(array $matches): string
     {
