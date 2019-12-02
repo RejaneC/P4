@@ -34,28 +34,8 @@ class ChapterController extends Controller
             "session" => $_SESSION["id"],
         ]);
     }
- 
-    // public function getPostComment($request, $commentManager, $chapter, $response)
-    // {
-    //     if (
-    //         $request->getMethod() === "POST"
-    //         && isset($request->getPost()["content"])
-    //         && !empty($request->getPost()["content"])
-    //         && isset($request->getPost()["pseudo"])
-    //         && !empty($request->getPost()["pseudo"])
-    //     ) {
-    //         /** Requête insertion */
-    //         $commentManager->insert(
-    //             $request->getPost()["content"],
-    //             $request->getPost()["pseudo"],
-    //             $chapter["id"]
-    //         );
-            
-    //         /** Redirection */
-    //         return $response;
-    //     }
-    // }
 
+    
     /** Affichage de la page d'un chapitre  */
     public function chapter($num_chap, $title, $id)
     {
@@ -84,9 +64,6 @@ class ChapterController extends Controller
             /** Redirection */
             return $this->redirect("/chapitre-" . $num_chap . "/" . $title . "/" . $id);
         }
-
-        // $response = $this->redirect("/chapitre-" . $num_chap . "/" . $title . "/" . $id);
-        // getPostComment($this->request, $commentManager, $chapter, $response);
 
         return $this->render('chapter/chapter.html.twig', [
             "chapter" => $chapter,
@@ -122,9 +99,6 @@ class ChapterController extends Controller
             /** Redirection */
             return $this->redirect("/dernier-chapitre");
         }
-
-        // $response = $this->redirect("/dernier-chapitre");
-        // getPostComment($this->request, $commentManager, $chapter, $response);
 
         return $this->render('chapter/lastChapter.html.twig', [
             "lastchapter" => $lastchapter,
