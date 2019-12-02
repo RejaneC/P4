@@ -34,9 +34,9 @@ class SecurityController extends Controller
             $access = new Security();
             
             /** Récupération de l'identifiant dans $form_username*/
-            $form_username = $this->request->getPost()["username"]; // On récupère ce qu'il y a dans l'input et on la stocke dasn une variable
-            $username = $access->user($form_username); // On prend l'username du formulaire, et on check dans Security si il existe
-            // Si il existe pas il retourne false, si non on retourne qqc
+            $form_username = $this->request->getPost()["username"];
+            $username = $access->user($form_username); /
+                
             /** Récupération du mot de passe dans $form_password  */
             $form_password = $this->request->getPost()["password"];
             
@@ -62,7 +62,7 @@ class SecurityController extends Controller
         return $this->render('security/connection.html.twig', [
             "errors" => $errors,
             "session" => $session
-        ]); // On rend la vue connection avec le tableau erreur / 
+        ]);
     }
     
 
