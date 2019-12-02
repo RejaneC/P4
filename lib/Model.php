@@ -22,11 +22,7 @@ class Model
         try {
             /** Si $pdo est nulle, alors on l'instancie */
             if (static::$pdo === null) {
-                // $db = "mysql:host=localhost:8889;dbname=blog_writer;charset=utf8mb4";
-
-                // /** Création de l'instance PDO dans la variable $pdo */
-                // static::$pdo = new PDO($db, "root", "root");
-
+                
                 $db = "mysql:host=rejanemewu507.mysql.db;dbname=rejanemewu507;charset=utf8mb4";
 
                 /** Création de l'instance PDO dans la variable $pdo */
