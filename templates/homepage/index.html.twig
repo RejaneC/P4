@@ -50,7 +50,7 @@
                
                 <li class="col-lg-3 col-md-5 col-sm-6 item-last-chapter">
                     <div class="img-chap w-100 mb-3 rounded"></div>
-                    <a class="text-dark link-chap" href="/chapitre-{{ recentChapter.num_chap }}/{{ recentChapter.title }}/{{ recentChapter.id }}">Chapitre {{ recentChapter.num_chap }}</a>
+                    <a class="text-dark link-chap" href="/chapitre-{{ recentChapter.num_chap }}/{{ recentChapter.title|slug }}/{{ recentChapter.id }}">Chapitre {{ recentChapter.num_chap }}</a>
                 </li>
 
             {% endfor %}
