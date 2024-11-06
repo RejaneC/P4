@@ -15,7 +15,7 @@
         }
     },
     "require": {
-        "twig/twig": "^2.12",
+        "twig/twig": "^3.11",
         "cocur/slugify": "^3.2",
         "squizlabs/php_codesniffer": "*",
         "friendsofphp/php-cs-fixer": "^2.16",
